@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Free Meal API | TheMealDB.com</title>
+	<!-- CSS Scripts -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+	<!-- Favicon Includes -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/images/icons/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/images/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="homepage">
+
+<header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.themealdb.com"><img src="../images/logo-small.png" alt="logo"></a>
+            </div>
+				
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://www.themealdb.com">Home</a></li>
+                    <li><a href="\api.php">API</a></li>
+                    <li><a href="https://forum.kodi.tv/showthread.php?tid=282387">Forum</a><a href="https://www.facebook.com/TheDataDB/"><img src="../images/facebook_icon.png"></a> <a href="https://twitter.com/TheAudioDB"><img src="../images/twitter_icon.png"></a></li>
+					<li>
+						<div class="search">
+                            <form role="form" action="../browse.php">
+								<input type="text" name="s" class="search-form" autocomplete="off" placeholder=" Search"  />
+                            </form>
+                        </div>
+					</li>
+				</ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+</header><!--/header-->
+<div class="container">
+           
+</div>
+	
+<section id="feature" >
+
+
+    
+        <div class="container">
+           <div class="center">
+
+
+	<b><img src='images/icons/thumb_up.gif'> Support</b><br> The API and site will always remain free at point of access. 
+	If you love our service and want extra features you can sign up as a <a href='https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5A138037KG443451XMHIZ3SY' />Paypal supporter</a> for $2.<br>
+	You can cancel anytime. This allows us to pay for the servers and bandwidth and develop new features.<br><br><b><img src='images/icons/api.png'> Test API Keys</b><br>You can use the test API key "1" during development of your app or for educational use(see test links below)<br> 
+	However you must become a supporter if releasing publicly on an appstore.<br> 
+	The test key may be revoked at any time if abused.<br><br><b><img src='images/icons/up_arrow.png'> API Production Key Upgrade</b><br>All  supporters have access to the beta version of the API which allows mutiple ingredient filters. <br>
+	You also get access to adding your own meals and images. You can also list the full database rather than limited to 100 items.<br>
+	Please <a href='https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5A138037KG443451XMHIZ3SY' />sign up</a> on Paypal and we will email you the upgrade.<br><br><b><img src='images/icons/email.png'> Contact</b><br> Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ef9b878a8b8e9b8e8b8daf88828e8683c18c8082">[email&#160;protected]</a> (please state if you are a Paypal Supporter)<br><br><img src='images/icons/code.png'> <b>API Methods using the developer test key '1' as the API key</b><br><br>
+
+<i>Search meal by name</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata</font><br>
+
+<i>List all meals by first letter</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/search.php?f=a</font><br>
+
+<i>Lookup full meal details by id</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/lookup.php?i=52772</font><br>
+
+<i>Lookup a single random meal</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/random.php</font><br>
+
+<i>Lookup a selection of 10 random meals</i> (only available to $2+ <a href='https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5A138037KG443451XMHIZ3SY' />Paypal supporters</a>)<br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/randomselection.php</font><br>
+
+<i>List all meal categories</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/categories.php</font><br>
+
+<i>Latest Meals</i> (only available to $2+ <a href='https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5A138037KG443451XMHIZ3SY' />Paypal supporters</a>)<br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/latest.php</font><br>
+
+<i>List all Categories, Area, Ingredients</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/list.php?c=list</font><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/list.php?a=list</font><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/list.php?i=list</font><br>
+
+<i>Filter by main ingredient</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast</font><br>
+
+<i>Filter by multi-ingredient</i> (only available to $2+ <a href='https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5A138037KG443451XMHIZ3SY' />Paypal supporters</a>)<br>
+	<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast,garlic,salt</font> 
+<br>
+
+<i>Filter by Category</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/filter.php?c=Seafood</font><br>
+
+<i>Filter by Area</i><br>
+<font color='#c5a1a1'>www.themealdb.com/api/json/v1/1/filter.php?a=Canadian</font><br><br>
+
+
+<img src='images/icons/image2.png'> <b>Images</b><br>
+Meal Thumbnail Images<br>
+Add <b>/preview</b> to the end of the meal image URL<br>
+<font color='#c5a1a1'>/images/media/meals/llcbn01574260722.jpg/preview</font><br>
+Ingredient Thumbnail Images<br>
+<font color='#c5a1a1'>www.themealdb.com/images/ingredients/Lime.png</font><br>
+<font color='#c5a1a1'>www.themealdb.com/images/ingredients/Lime-Small.png</font><br>
+
+</div><!--/.container-->
+</section><!--/#feature-->
+
+<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    &copy; 2023 TheMealDB</a> <br>Proudly built in the UK <img src='/images/icons/flags/big/16/gb.png'/>
+                </div>
+                <div class="col-sm-6">
+					<center>
+						<a href="https://www.thecocktaildb.com" target="_blank"><img src="../images/logo-tcdb.png" alt="logo"></a>
+						<a href="http://www.theaudiodb.com" target="_blank"><img src="../images/logo-tadb.png" alt="logo"></a>
+						<a href="https://www.thesportsdb.com" target="_blank"><img src="../images/logo-tsdb.png" alt="logo"></a>
+					</center>
+				</div>
+                <div class="col-sm-3">
+                    <ul class="pull-right">
+                        <li><a href="../about.php">About</a></li>
+                        <li><a href="../faq.php">Faq</a></li>
+                        <li><a href="../contact.php">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+ </body>
+</html>

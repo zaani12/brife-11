@@ -55,10 +55,10 @@ searchForm.addEventListener('submit', e => {
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`)
     .then(response => response.json())
     .then(data => {
-      // data contient les résultats de la recherche
-      // Affiche les résultats de la recherche sur la page
       mealList.innerHTML = '';
       data.meals.forEach(meal => {
+      console.log(data);
+
         const result = document.createElement('div');
         result.innerHTML = `<div class="container"  class = "meal-item card "  style="width: 30rem; display: flex"  data-id = "${meal.idMeal}">
         <div class = "meal-img">
@@ -123,5 +123,68 @@ window.onclick = function moreInformation(e) {
 
     console.log("zaani");
     
+  }let currentPage = 1;
+  const mealsPerPage = 6;
+  
+  // Create the pagination buttons
+  const pagination = document.createElement('div');
+  pagination.classList.add('pagination');
+  const prevButton = document.createElement('button');
+  prevButton.textContent = 'Previous';
+  prevButton.classList.add('prev');
+  const nextButton = document.createElement('button');
+  nextButton.textContent = 'Next';
+  nextButton.classList.add('next');
+  pagination.appendChild(prevButton);
+  pagination.appendChild(nextButton);
+  
+  // Append the pagination buttons to the DOM
+  mealList.appendChild(pagination);
+  
+  // Function to update the meal cards displayed based on the current page
+  function updateMeals() {
+    // Get the start and end indexes for the current page
+    const startIndex = (currentPage - 1) * mealsPerPage;
+    const endIndex = startIndex + mealsPerPage;
+  
+    // Loop through all the meal cards and hide or show them based on the current page
+    const allMeals = document.querySelectorAll('.meal-item');
+    allMeals.forEach((meal, index) => {
+      if (index >= startIndex && index < endIndex) {
+        meal.style.display = 'block';
+      } else {
+        meal.style.display = 'none';
+      }
+    });
+  
+    // Disable the "Previous" button on the first page
+    if (currentPage === 1) {
+      prevButton.disabled = true;
+    } else {
+      prevButton.disabled = false;
+    }
+  
+    // Disable the "Next" button on the last page
+    if (currentPage * mealsPerPage >= allMeals.length) {
+      nextButton.disabled = true;
+    } else {
+      nextButton.disabled = false;
+    }
   }
+  
+  // Event listener for the "Previous" button
+  prevButton.addEventListener('click', () => {
+    currentPage--;
+    updateMeals();
+  });
+  
+  // Event listener for the "Next" button
+  nextButton.addEventListener('click', () => {
+    currentPage++;
+    updateMeals();
+  });
+  
+  // Call the updateMeals function to initially display the first page of meals
+  updateMeals();
+  
 };
